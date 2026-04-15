@@ -21,6 +21,7 @@
       width: 300px;
       height: 300px;
       cursor: pointer;
+      margin-bottom: 30px;
     }
     .box {
       width: 100%;
@@ -54,18 +55,14 @@
       transform: rotateX(115deg);
     }
     .message {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 85%;
-      max-width: 700px;
+      width: 92%;
+      max-width: 720px;
       padding: 35px;
-      background: rgba(255,255,255,0.96);
+      background: rgba(255,255,255,0.97);
       border-radius: 25px;
       box-shadow: 0 15px 50px rgba(0,0,0,0.3);
-      font-size: 1.65rem;
-      line-height: 1.75;
+      font-size: 1.6rem;
+      line-height: 1.85;
       text-align: center;
       opacity: 0;
       transition: opacity 1.5s ease;
@@ -90,7 +87,7 @@
 
   <div class="message" id="message">
     Biliyorum bazen o kadar sinir ediyorum ki...<br><br>
-    Ama demek istediğim şey şuydu:<br>
+    Ama demek istediğim şey şuydu:<br><br>
     Sen beni asla rahatsız etmezsin, bunu bilmeni istiyorum.<br>
     Sadece orada kötü bir şey söylemedim,<br>
     tam tersi seni önemsediğim için konuştum.<br><br>
@@ -107,7 +104,7 @@
     function openBox() {
       document.querySelector('.gift-box').classList.add('opened');
       document.getElementById('message').style.opacity = '1';
-      createHearts(80);
+      createHearts(70);
     }
 
     function createHearts(count) {
@@ -121,7 +118,7 @@
         hearts.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height - canvas.height,
-          size: Math.random() * 25 + 20,
+          size: Math.random() * 28 + 22,
           speed: Math.random() * 3 + 2,
           color: '#ff4757'
         });
